@@ -5,7 +5,7 @@ The basic form of the t-SNE ("t-distributed Stochastic Neighbor Embedding") tech
 
 This C# implementation is a (mostly) direct translation of the original Python implementation written by researcher L. van der Maaten, who co-authored the original t-SNE paper. The original paper is "Visualizing Data using t-SNE" (2008), L. van der Maaten and G. Hinton. A link to the original Python implementation of t-SNE is at https://lvdmaaten.github.io/tsne/.
 
-# Demo Data
+## Demo Data
 
 The t-SNE implementation was tested using a tiny 12-item subset of the Penguin Dataset. The data is:
 
@@ -24,22 +24,22 @@ The t-SNE implementation was tested using a tiny 12-item subset of the Penguin D
 
 Each line represents a penguin. The fields are species, bill length, bill width, flipper length, body mass. The species labels in the first column are not directly used by the t-SNE reduction function -- they are used only in a graph to verify that the reduced data accuractely reflects the source data.
 
-# Usage
+## Usage
 
 Calling code looks like:
 
-string ifn = @"C:\VSM\TSNE\Data\penguin_12.txt";  
-double[][] X = TSNE.MatLoad(ifn, new int[] { 1, 2, 3, 4 }, ',', "#"); // not col [0]  
-Console.WriteLine("Source data: ");  
-TSNE.MatShow(X, 1, 10, true); // 1 decimal, show indices  
+    string ifn = @"C:\VSM\TSNE\Data\penguin_12.txt";  
+    double[][] X = TSNE.MatLoad(ifn, new int[] { 1, 2, 3, 4 }, ',', "#"); // not col [0]  
+    Console.WriteLine("Source data: ");  
+    TSNE.MatShow(X, 1, 10, true); // 1 decimal, show indices  
 
-int maxIter = 500;  
-int perplexity = 3;  
-double[][] reduced = TSNE.Reduce(X, maxIter, perplexity);  
+    int maxIter = 500;  
+    int perplexity = 3;  
+    double[][] reduced = TSNE.Reduce(X, maxIter, perplexity);  
 
-Console.WriteLine("Reduced data: ");  
-TSNE.MatShow(reduced, 2, 10, true);  
+    Console.WriteLine("Reduced data: ");  
+    TSNE.MatShow(reduced, 2, 10, true);  
 
-Console.WriteLine("Saving reduced data for a graph ");  
-string ofn = @"C:\VSM\TSNE\Data\penguin_reduced.txt";  
-TSNE.MatSave(reduced, ofn, ',', 2); // comma delim,  2 decimals  
+    Console.WriteLine("Saving reduced data for a graph ");  
+    string ofn = @"C:\VSM\TSNE\Data\penguin_reduced.txt";  
+    TSNE.MatSave(reduced, ofn, ',', 2); // comma delim,  2 decimals  
