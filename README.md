@@ -48,7 +48,7 @@ The maxIter and perplaxity parameter values must be determined by trial and erro
 
 ## Demo Program
 
-The demo code is organized as a single C# class named TSNE that houses a static Reduce() function. The Reduce() function calls two primary helper functions, ComputeP() and ComputePH(). Then there are 32 secondary helper functions that do things, such as matrix addition, that are built-in in Python, but must be implemented in C#. The TNSE class also contains a nested Gaussian class, which is used to initialize the result reduced matrix to random Gaussain values with mean 0 and standard deviation 1.
+The demo code is organized as a single C# class named TSNE that houses a static Reduce() function. The Reduce() function calls two primary helper functions, ComputeP() and ComputePH(). Then there are 32 secondary helper functions that do things, such as matrix addition, that are built into Python, but must be implemented in C#. The TNSE class also contains a nested Gaussian class, which is used to initialize the result reduced matrix to random Gaussain values with mean 0 and standard deviation 1.
 
 
 
