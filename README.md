@@ -43,3 +43,9 @@ Calling code looks like:
     Console.WriteLine("Saving reduced data for a graph ");  
     string ofn = @"C:\VSM\TSNE\Data\penguin_reduced.txt";  
     TSNE.MatSave(reduced, ofn, ',', 2); // comma delim,  2 decimals  
+
+The maxIter and perplaxity parameter values must be determined by trial and error. A weakness of t-SNE is that the technique is extremely sensitive to these values, and tuning t-SNE can require quite a bit of time.
+
+## Demo Program
+
+The demo code is organized as a single C# class named TSNE that houses a static Reduce() function.
