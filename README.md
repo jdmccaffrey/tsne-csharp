@@ -44,7 +44,7 @@ Calling code looks like:
     string ofn = @"C:\VSM\TSNE\Data\penguin_reduced.txt";  
     TSNE.MatSave(reduced, ofn, ',', 2); // comma delim,  2 decimals  
 
-The maxIter and perplexity parameter values must be determined by trial and error. A weakness of t-SNE is that the technique is extremely sensitive to these values, and tuning t-SNE can require quite a bit of time.
+The maxIter and perplexity parameter values must be determined by trial and error. A minor weakness of t-SNE is that the technique is often very sensitive to these values, and so tuning t-SNE can require quite a bit of time.
 
 The demo program produces reduced data that looks like:
 
