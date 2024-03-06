@@ -61,7 +61,7 @@ The demo program produces reduced data tha looks like:
     -304.47, -694.46
     -145.02, -894.52
 
-![image](https://github.com/jdmccaffrey/tsne-csharp/assets/14942353/7ff4a143-d7ff-4fc9-97e5-ccef54124627)
+![Reduced data graph](penguin_12_reduced_graph.jpg)
 
 
 ## Demo Program
