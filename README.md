@@ -44,7 +44,7 @@ Calling code looks like:
     string ofn = @"C:\VSM\TSNE\Data\penguin_reduced.txt";  
     TSNE.MatSave(reduced, ofn, ',', 2); // comma delim,  2 decimals  
 
-The maxIter and perplaxity parameter values must be determined by trial and error. A weakness of t-SNE is that the technique is extremely sensitive to these values, and tuning t-SNE can require quite a bit of time.
+The maxIter and perplexity parameter values must be determined by trial and error. A weakness of t-SNE is that the technique is extremely sensitive to these values, and tuning t-SNE can require quite a bit of time.
 
 The demo program produces reduced data that looks like:
 
@@ -66,11 +66,9 @@ I manually dropped the reduced data into an Excel spreadsheet, added the class l
 <img src="penguin_12_reduced_graph.jpg"
   style="float: left; margin-right: 10px;" width="600" height="400"/>
 
-The graph shows that one species is distince from the other two.
+The graph shows that one species is distinct from the other two.
 
 ## Demo Program
 
-The demo code in file TSNEProgram.cs is organized as a single C# class named TSNE that houses a static Reduce() function. The Reduce() function calls two primary helper functions, ComputeP() and ComputePH(). Then there are 32 secondary helper functions that do things, such as matrix addition, that are built into Python, but must be implemented in C#. The TNSE class also contains a nested Gaussian class, which is used to initialize the result reduced matrix to random Gaussain values with mean 0 and standard deviation 1.
-
-
+The demo code in file TSNEProgram.cs is organized as a single C# wrapper class named TSNE that houses a static Reduce() function. The Reduce() function calls two primary helper functions, ComputeP() and ComputePH(). Then there are 32 secondary helper functions that do things, such as matrix addition, that are built into Python, but must be implemented in C#. The TNSE class also contains a nested Gaussian class, which is used to initialize the result reduced matrix to random Gaussain values with mean 0 and standard deviation 1.
 
