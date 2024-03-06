@@ -64,7 +64,7 @@ The demo program produces reduced data tha looks like:
 ![Reduced data graph](penguin_12_reduced_graph.jpg)
 
 <img src="penguin_12_reduced_graph.jpg"
-  style="float: left; margin-right: 10px;" />
+  style="float: left; margin-right: 10px;" width="600" height="400"/>
 
 ## Demo Program
 
