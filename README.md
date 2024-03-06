@@ -9,18 +9,18 @@ This C# implementation is a (mostly) direct translation of the original Python i
 
 The t-SNE implementation was tested using a tiny 12-item subset of the Penguin Dataset. The data is:
 
-0, 39.5, 17.4, 186, 3800  
-0, 40.3, 18.0, 195, 3250  
-0, 36.7, 19.3, 193, 3450  
-0, 38.9, 17.8, 181, 3625  
-1, 46.5, 17.9, 192, 3500  
-1, 45.4, 18.7, 188, 3525  
-1, 45.2, 17.8, 198, 3950  
-1, 46.1, 18.2, 178, 3250  
-2, 46.1, 13.2, 211, 4500  
-2, 48.7, 14.1, 210, 4450  
-2, 46.5, 13.5, 210, 4550  
-2, 45.4, 14.6, 211, 4800  
+    0, 39.5, 17.4, 186, 3800  
+    0, 40.3, 18.0, 195, 3250  
+    0, 36.7, 19.3, 193, 3450  
+    0, 38.9, 17.8, 181, 3625  
+    1, 46.5, 17.9, 192, 3500  
+    1, 45.4, 18.7, 188, 3525  
+    1, 45.2, 17.8, 198, 3950  
+    1, 46.1, 18.2, 178, 3250  
+    2, 46.1, 13.2, 211, 4500  
+    2, 48.7, 14.1, 210, 4450  
+    2, 46.5, 13.5, 210, 4550  
+    2, 45.4, 14.6, 211, 4800  
 
 Each line represents a penguin. The fields are species, bill length, bill width, flipper length, body mass. The species labels in the first column are not directly used by the t-SNE reduction function -- they are used only in a graph to verify that the reduced data accuractely reflects the source data.
 
@@ -45,6 +45,24 @@ Calling code looks like:
     TSNE.MatSave(reduced, ofn, ',', 2); // comma delim,  2 decimals  
 
 The maxIter and perplaxity parameter values must be determined by trial and error. A weakness of t-SNE is that the technique is extremely sensitive to these values, and tuning t-SNE can require quite a bit of time.
+
+The demo program produces reduced data tha looks like:
+
+    -371.68,    1.73
+     655.53,  119.32
+     -11.95,  844.10
+     360.71,  657.53
+      46.08,  644.41
+     186.23,  774.56
+    -309.99,  161.68
+     788.56,   14.59
+    -384.35, -890.62
+    -509.66, -738.33
+    -304.47, -694.46
+    -145.02, -894.52
+
+![image](https://github.com/jdmccaffrey/tsne-csharp/assets/14942353/7ff4a143-d7ff-4fc9-97e5-ccef54124627)
+
 
 ## Demo Program
 
