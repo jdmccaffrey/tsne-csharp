@@ -22,7 +22,7 @@ The t-SNE implementation was tested using a tiny 12-item subset of the Penguin D
     2, 46.5, 13.5, 210, 4550  
     2, 45.4, 14.6, 211, 4800  
 
-Each line represents a penguin. The fields are species, bill length, bill width, flipper length, body mass. The species labels in the first column are not directly used by the t-SNE reduction function -- they are used only in a graph to verify that the reduced data accuractely reflects the source data.
+Each line represents a penguin. The fields are species (0 = Adelie, 1 = Chinstrap, 2 = Gentoo), bill length, bill width, flipper length, body mass. The species labels in the first column are not directly used by the t-SNE reduction function -- they are used only in a graph to verify that the reduced data accuractely reflects the source data.
 
 ## Usage
 
@@ -66,7 +66,7 @@ I manually dropped the reduced data into an Excel spreadsheet, added the class l
 <img src="penguin_12_reduced_graph.jpg"
   style="float: left; margin-right: 10px;" width="600" height="400"/>
 
-The graph shows that one species is distinct from the other two.
+The graph shows that one species (2 = Gentoo) is distinct from the other two.
 
 ## Demo Program
 
