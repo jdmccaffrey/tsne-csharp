@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using System.Xml.Schema;
 
 // Paper: "Visualizing Data using t-SNE" (2008), 
 //   L. van der Maaten and G. Hinton.
